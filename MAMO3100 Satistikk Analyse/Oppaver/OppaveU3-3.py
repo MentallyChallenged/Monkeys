@@ -16,3 +16,13 @@ y = dataframe["Avling"]
 
 moddellen = sm.OLS(y,x).fit()   # Merk: y først, deretter X
 print(moddellen.summary())
+
+## lage regrosjonsligningen
+# danner koefisentene 
+koeffisienter = moddellen.params
+print(koeffisienter)
+
+uttrykk = [f"{koeff:.4f} * x{i}" for i, koeff in enumerate(koeffisienter[1:], start = 1)]
+ligningn = f"y = {koeffisienter[0]:.4f} + " + " + ".join(uttrykk)
+print("Regresjons lingingen er: ")
+print(ligningn)
