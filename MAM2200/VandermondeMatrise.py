@@ -8,3 +8,12 @@ def vandermonde(x):
     return V
 m = vandermonde(np.array([[1, 2, 3]]))
 print(m)
+
+def vandermonde2(x, m):
+    n = x.size
+    V = np.ones((n,m))
+    for i in range(1,m):
+        V[:,i] = (x ** i) 
+    return V
+d = vandermonde2(np.array([[1,2,3]]), 4)
+print(d)
