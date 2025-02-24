@@ -33,3 +33,13 @@ def desent(
 
 bunnpunkt = desent(funksjon, funskjon_gradientet, np.array([2,0.25]))
 print("BUNNPUNKT: ", bunnpunkt)
+
+a = np.array([1.0,2.0,3.0,4.0])
+n = a.size
+h = 0.00001
+a_pluss = a
+
+for i in range(n):
+    a_pluss = a.copy()
+    a_pluss[i] += h
+    print(i, a_pluss)

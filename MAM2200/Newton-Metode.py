@@ -3,12 +3,12 @@ import math
 # Newton.py: Skript som beregner nullpunkt ved Newtons metode.
 # Definer funksjonen som vi skal bestemme nullpunktet til:
 def f(x):
-    return x*np.exp(x)-1
+    return np.exp(x-np.sqrt(x)) - 1
 # Og den deriverte:
 def fd(x):
-    return np.exp(x) + x*np.exp(x)
+    return np.exp(x-np.sqrt(x))
 # Sett startpunktet x0 :
-x0=1
+x0=1.5
 # Definerer hjelpevariabel "avvik":
 avvik=1
 antall = 0
