@@ -15,5 +15,5 @@ def vandermonde2(x, m):
     for i in range(1,m):
         V[:,i] = (x ** i) 
     return V
-d = vandermonde2(np.array([[1,2,3]]), 4)
+d = vandermonde2(np.array([[0,1,2,3]]), 4)
 print(d)

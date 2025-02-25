@@ -12,7 +12,7 @@ def chebyshev(a, b, n):
 
 # Define the interval and number of points
 a, b = -1, 1
-n = 5
+n = 15
 
 # Generate Chebyshev points
 x_cheb = chebyshev(a, b, n)
